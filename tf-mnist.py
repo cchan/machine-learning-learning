@@ -47,5 +47,5 @@ correct_prediction = tf.equal(tf.argmax(prediction,1), tf.argmax(label, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
 
 # Run the "accuracy" op, which will feed the data to the session and make things work.
-print sess.run(accuracy, feed_dict={x: mnist.test.images, label: mnist.test.labels})
+print(sess.run(accuracy, feed_dict={x: mnist.test.images, label: mnist.test.labels}))
 
