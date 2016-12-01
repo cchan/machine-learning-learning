@@ -3,9 +3,11 @@ import input_data
 
 # Load all the data as one-hot
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
+# In other words, it'll look like this: [image of a 2]: [0 0 1 0 0 0 0 0 0 0]
 
 # Create a placeholder, filled with feed_dict later
 x = tf.placeholder(tf.float32, [None, 784])
+# 
 
 # Create variables which may be changed
 W = tf.Variable(tf.zeros([784,10]))
